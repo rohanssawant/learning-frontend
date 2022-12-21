@@ -1,0 +1,52 @@
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: blue;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* descendent selector: all children p of footer elem */
+/* footer p {
+  font-size: 16px;
+} */
+
+/* Class & ID selector */
+/* 
+section p {
+  font-style: italic;
+} 
+*/
+#author {
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 16px;
+}
