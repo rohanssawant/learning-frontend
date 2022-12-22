@@ -75,3 +75,51 @@ section p {
   border-top: #1098ad solid;
   border-bottom: #1098ad solid;
 }
+
+/* Psuedo class */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  color: blue;
+}
+
+li:nth-child(2) {
+  color: red;
+}
+
+/* this wont work because first child of section is not P but `h2` */
+section p:first-child {
+  color: aqua;
+}
+
+/* LVHA */
+/* Style links */
+a {
+  color: red;
+}
+/* this target `a` with link ie `a` having href attr */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+/* links which are visited */
+a:visited {
+  color: #1098ad;
+}
+
+/* when cursor hovered */
+a:hover {
+  color: rgb(6, 109, 75);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* when we click ele */
+a:active {
+  background-color: #444;
+  font-style: italic;
+}
