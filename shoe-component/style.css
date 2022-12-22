@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+article {
+  border: 3px solid black;
+}
+
+header {
+  background-color: lightgrey;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price {
+  font-size: 22px;
+}
+
+.shipping-details {
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+  text-transform: uppercase;
+}
+
+/* LVHA */
+a:link {
+  color: rgb(35, 34, 34);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.button {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: black;
+  background-color: white;
+}
