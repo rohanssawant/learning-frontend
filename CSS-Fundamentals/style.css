@@ -75,3 +75,22 @@ section p {
   border-top: #1098ad solid;
   border-bottom: #1098ad solid;
 }
+
+/* Psuedo class */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  color: blue;
+}
+
+li:nth-child(2) {
+  color: red;
+}
+
+/* this wont work because first child of section is not P but `h2` */
+section p:first-child {
+  color: aqua;
+}
