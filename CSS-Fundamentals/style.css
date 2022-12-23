@@ -20,6 +20,11 @@ body {
   color: #444;
 }
 
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .main-header,
 .related-section {
   background-color: #e9e5e5;
@@ -28,7 +33,9 @@ body {
 }
 
 .main-header {
+  border-top: 8px solid #0b6c7b;
   margin-bottom: 30px;
+  height: 80px;
 }
 
 article {
@@ -65,6 +72,11 @@ h4 {
 
 .post-header {
   margin-bottom: 30px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
 }
 
 #author {
@@ -153,6 +165,10 @@ section p:first-child {
 }
 
 .related-section {
+  /* border: 1px solid red; */
   border-top: #1098ad solid;
   border-bottom: #1098ad solid;
+  width: 80%;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
