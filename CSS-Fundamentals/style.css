@@ -20,6 +20,11 @@ body {
   color: #444;
 }
 
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .main-header,
 .related-section {
   background-color: #e9e5e5;
@@ -160,7 +165,10 @@ section p:first-child {
 }
 
 .related-section {
+  /* border: 1px solid red; */
   border-top: #1098ad solid;
   border-bottom: #1098ad solid;
-  width: 500px;
+  width: 80%;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
