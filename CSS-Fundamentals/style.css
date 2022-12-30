@@ -18,6 +18,7 @@ section p {
 body {
   font-family: sans-serif;
   color: #444;
+  position: relative;
 }
 
 .container {
@@ -36,6 +37,16 @@ body {
   border-top: 8px solid #0b6c7b;
   margin-bottom: 30px;
   height: 80px;
+}
+
+.main-header nav a:link {
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.main-header nav a:link:last-child {
+  margin-right: 0;
 }
 
 article {
@@ -57,6 +68,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -74,6 +86,7 @@ h4 {
   margin-bottom: 30px;
 }
 
+/* Img are inline ele, but behave like a inline block ele */
 .post-img {
   width: 100%;
   height: auto;
@@ -171,4 +184,37 @@ section p:first-child {
   width: 80%;
   /* margin-left: auto;
   margin-right: auto; */
+}
+
+/* Positioning happens wrt parent element present. In case of no direct parent element, it stays according to viewport ie visible page. It needs to be in same container as that of parent ele. Use pos: relative to first parent ele*/
+/* https://css-tricks.com/almanac/properties/p/position/ */
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* pseudo elements by default inline ele */
+h1::first-letter {
+  margin-right: 20px;
+}
+
+p::first-line {
+  color: grey;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
 }
