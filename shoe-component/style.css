@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -32,12 +33,18 @@ h2 {
   margin: 10px 0;
 }
 
+.details {
+  margin-top: 15px;
+}
+
 .price {
   font-size: 22px;
+  float: left;
 }
 
 .product-description {
-  margin-bottom: 1%;
+  margin-top: 8px;
+  clear: both;
 }
 
 .shipping-details {
@@ -46,11 +53,13 @@ h2 {
   font-weight: bold;
   color: grey;
   text-transform: uppercase;
-  margin-bottom: 2%;
+  margin-top: 7px;
+  float: right;
 }
 
 /* LVHA */
 a {
+  margin-top: 5px;
   margin-bottom: 30px;
 }
 a:link {
@@ -108,6 +117,9 @@ h2::before {
   display: inline-block;
 }
 
+.color-options {
+  margin-top: 12px;
+}
 .color1 {
   background-color: brown;
   display: inline-block;
@@ -123,4 +135,23 @@ h2::before {
 .color4 {
   display: inline-block;
   background-color: black;
+}
+
+.product-img {
+  /* background-color: yellow; */
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.product-info {
+  /* background-color: blue; */
+  width: 35%;
+  float: left;
+}
+
+.product-details {
+  /* background-color: #ff0000; */
+  width: 30%;
+  float: right;
 }
