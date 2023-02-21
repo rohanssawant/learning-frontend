@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 3px solid black;
+  margin: 25% auto;
+  /* border: 1px solid red; */
+  width: 60%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+/* .details-title {
+  margin: 10px 0;
+} */
+
+.price {
+  font-size: 22px;
+}
+
+.product-description {
+  margin-bottom: 1%;
+}
+
+.shipping-details {
+  /* border: 1px solid red; */
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+
+/* LVHA */
+a {
+  margin-bottom: 30px;
+}
+a:link {
+  color: rgb(35, 34, 34);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.button:hover {
+  border-top: 3px solid black;
+  color: black;
+  background-color: white;
+}
+
+.color {
+  background-color: #ff0000;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.color-options {
+  margin-top: 12px;
+}
+.color1 {
+  background-color: brown;
+  display: inline-block;
+}
+.color2 {
+  display: inline-block;
+  background-color: yellow;
+}
+.color3 {
+  display: inline-block;
+  background-color: blue;
+}
+.color4 {
+  display: inline-block;
+  background-color: black;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.product-info {
+  padding-top: 10px;
+}
+.product-details {
+  flex-shrink: 0;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.details {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  /* background-color: green; */
+}
+
+.shipping-details {
+  /* background-color: yellow; */
+}
