@@ -25,9 +25,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseData = (expenseData) => {
+    console.log("this is from app: " + JSON.stringify(expenseData));
+  };
+
   return (
     <div className="App">
-      <NewExpenses />
+      <NewExpenses onSubmitExpense={addExpenseData} />
       <Expenses expenses={expenses} />
     </div>
   );
