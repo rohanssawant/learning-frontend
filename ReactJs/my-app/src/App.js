@@ -27,7 +27,7 @@ const staticExpenses = [
 ];
 
 function App() {
-  const [expenses, setExpenses] = useState(staticExpenses);
+  const [expensesData, setExpenses] = useState(staticExpenses);
   const addExpenseData = (expenseData) => {
     console.log("this is from app: " + JSON.stringify(expenseData));
     setExpenses((prevState) => {
@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <NewExpenses onSubmitExpense={addExpenseData} />
-      <Expenses expenses={expenses} />
+      <Expenses expenses={expensesData} />
     </div>
   );
 }
