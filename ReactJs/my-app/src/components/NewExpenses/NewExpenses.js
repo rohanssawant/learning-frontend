@@ -1,14 +1,27 @@
+import { useState } from "react";
 import "./NewExpenses.css";
 import ExpenseForm from "./ExpenseForm";
 function NewExpenses(props) {
+  const [isAddForm, setIsAddForm] = useState(false);
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = { ...enteredExpenseData, id: Math.random().toString() };
-    console.log("this is expenseData: " + JSON.stringify(expenseData));
     props.onSubmitExpense(expenseData);
+    showFormHandler();
+  };
+  const showFormHandler = () => {
+    if (isAddForm) return setIsAddForm(false);
+    return setIsAddForm(true);
   };
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+      {isAddForm ? (
+        <ExpenseForm
+          onSaveExpenseData={saveExpenseDataHandler}
+          onSaveBtnHandler={showFormHandler}
+        />
+      ) : (
+        <button onClick={showFormHandler}>Add Expense</button>
+      )}
     </div>
   );
 }
