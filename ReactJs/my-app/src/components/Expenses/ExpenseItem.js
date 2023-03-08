@@ -16,7 +16,7 @@ function ExpenseItem({ title, date, amount }) {
         <h2>{varTitle}</h2>
       </div>
       <div className="expense-item__price">${amount}</div>
-      <button onClick={onClickHandler}>Change Title</button>
+      {/* <button onClick={onClickHandler}>Change Title</button> */}
     </Card>
   );
 }
