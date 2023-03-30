@@ -1,11 +1,17 @@
 import { useState } from "react";
-
-function LoginForm({ onSubmit }) {
+import Card from "../UI/Card";
+import classes from "./LoginForm.module.css";
+function LoginForm({ onSubmit, onError }) {
   const [userName, setuserName] = useState("");
   const [password, setpassword] = useState("");
 
   function submitForm(e) {
     e.preventDefault();
+
+    if (userName.trim().length === 0 || password.trim().length === 0) {
+      return onError({ msg: "Enter a valid non empty input values." });
+    }
+
     let userDetails = {
       userName,
       password,
@@ -23,7 +29,7 @@ function LoginForm({ onSubmit }) {
   }
 
   return (
-    <>
+    <Card className={classes.input}>
       <form onSubmit={submitForm}>
         <label htmlFor="uname">User Name:</label>
         <input
@@ -43,7 +49,7 @@ function LoginForm({ onSubmit }) {
         ></input>
         <button type="submit">Submit</button>
       </form>
-    </>
+    </Card>
   );
 }
 
