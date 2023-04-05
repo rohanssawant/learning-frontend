@@ -23,19 +23,20 @@ const Login = (props) => {
     PASSWORD_INITIAL_STATE
   );
 
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
+
   useEffect(() => {
     const timerIndentifier = setTimeout(() => {
       console.log(`useEffect runs to check form validity`);
-      setFormIsValid(
-        emailState.value.includes("@") && passwordState.value.trim().length > 6
-      );
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
 
     return () => {
       console.log(`cleanup process`);
       clearTimeout(timerIndentifier);
     };
-  }, [emailState.value, passwordState.value]);
+  }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
     // setEnteredEmail(event.target.value);
