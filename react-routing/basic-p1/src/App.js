@@ -13,10 +13,11 @@ import RootLayout from "./pages/Root";
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement: <ErrorPage />,
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
+      // { path: "", element: <Home /> },
+      { index: true, element: <Home /> },
       { path: "/products", element: <Product /> },
       { path: "/products/:productId", element: <ProductDetails /> },
     ],
