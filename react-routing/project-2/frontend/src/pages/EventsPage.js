@@ -6,17 +6,24 @@ export async function loader() {
   if (!response.ok) {
     // setError("Fetching events failed.");
     console.log(response);
+    // return { isError: true, message: "Could not load events" };
+    // throw { message: "Could not load events" };
+    throw new Response(JSON.stringify({ message: "Could not load events" }), {
+      status: 500,
+    });
   } else {
-    const resData = await response.json();
-    return resData.events;
+    return response;
   }
 }
 
 function EventsPage() {
-  const eventsData = useLoaderData();
+  const data = useLoaderData();
+  if (data.isError) return <p>{data.message}</p>;
+  const events = data.events;
+
   return (
     <>
-      <EventsList events={eventsData} />
+      <EventsList events={events} />
     </>
   );
 }
