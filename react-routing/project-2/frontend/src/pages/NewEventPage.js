@@ -19,6 +19,11 @@ export async function action({ request, params }) {
     body: JSON.stringify(event),
   });
 
+  // Return BE validation errors
+  if (resp.status === 422) {
+    return resp;
+  }
+
   if (!resp.ok) {
     throw json({ message: "Something went wrong!" }, { status: 500 });
   }
