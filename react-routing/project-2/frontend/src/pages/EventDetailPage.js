@@ -1,6 +1,7 @@
 import React from "react";
 import {
   json,
+  redirect,
   useLoaderData,
   useParams,
   useRouteLoaderData,
@@ -16,6 +17,19 @@ export async function loader({ request, params }) {
   } else {
     return response;
   }
+}
+// Delete an event
+export async function action({ request, params }) {
+  const resp = await fetch(`http://localhost:8080/events/${params.eventId}`, {
+    method: request.method,
+  });
+  if (!resp.ok) {
+    throw json(
+      { message: "Could not delete selected event!" },
+      { status: 500 }
+    );
+  }
+  return redirect("/events");
 }
 
 function EventDetailPage() {
